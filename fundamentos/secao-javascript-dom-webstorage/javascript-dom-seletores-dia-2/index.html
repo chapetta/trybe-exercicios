@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const h1 = document.createElement('h1')
+      h1.innerHTML = 'TrybeTrip - Agência de Viagens'
+      document.body.appendChild(h1)
+
+      const main = document.createElement('main')
+      main.className = 'main-content'
+      document.body.appendChild(main)
+
+      const section = document.createElement('section')
+      section.className = 'center-content'
+      main.appendChild(section)
+
+      const paragraf = document.createElement('p')
+      section.appendChild(paragraf)
+      paragraf.innerHTML = 'Algum texto para o exercicio'
+
+      const secondSection = document.createElement('section')
+      secondSection.className = 'left-content'
+      main.appendChild(secondSection)
+
+      const thirdSection = document.createElement('section')
+      thirdSection.className = 'right-content'
+      main.appendChild(thirdSection)
+
+      const image = document.createElement('img')
+      image.src = 'https://picsum.photos/200'
+      image.className = 'small-image'
+      secondSection.appendChild(image)
+      
+    </script>
+  </body>
+</html>
